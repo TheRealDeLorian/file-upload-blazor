@@ -16,7 +16,7 @@ jobs:
         run: |
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
-      - run: 
+      - run: |
           docker build -t dorian-test-blazor-thing .
           docker run -d \
             -p 3456:8080 \
