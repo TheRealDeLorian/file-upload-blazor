@@ -18,6 +18,7 @@ jobs:
       - run: echo "🍏 This job's status is ${{ job.status }}."
       - run: |
           docker build -t dorian-test-blazor-thing .
+          docker rm -f dorian-test-blazor-thing || true
           docker run -d \
             -p 3456:8080 \
             --name dorian-test-blazor-thing \
